@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — eatnibble</title>
-  <meta name="description" content="How eatnibble handles your meal photos, descriptions and log data." />
+  <meta name="description" content="How eatnibble handles your meal photos, descriptions, log data, sign-in and Apple Health access." />
   <link rel="canonical" href="https://eatnibble.app/privacy.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="eatnibble" />
   <meta property="og:url" content="https://eatnibble.app/privacy.html" />
   <meta property="og:title" content="Privacy Policy — eatnibble" />
-  <meta property="og:description" content="How eatnibble handles your meal photos, descriptions and log data." />
+  <meta property="og:description" content="How eatnibble handles your meal photos, descriptions, log data, sign-in and Apple Health access." />
   <meta name="twitter:card" content="summary" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -34,7 +34,7 @@
   <main class="doc">
     <div class="wrap">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: update this date when you publish</p>
+      <p class="updated">Last updated: 1 September 2026</p>
 
       <p>
         eatnibble is a calorie and macro tracker. This page explains, in plain terms, what
@@ -47,28 +47,56 @@
         is sent to our backend, which forwards it to Google's Gemini API for analysis. The
         photo or text is processed in memory to produce a nutrition estimate (calories,
         protein, carbs, fat) and is not written to a database or kept after the request
-        completes.
+        completes. It is not linked to your account.
+      </p>
+
+      <h2>Signing in</h2>
+      <p>
+        You can analyze your first few meals on a device without signing in. After that,
+        eatnibble asks you to sign in with Apple so your daily analysis limit follows your
+        account instead of the device.
+      </p>
+      <p>
+        Sign in with Apple is the only method — there is no password, and you choose
+        whether to share your real email or use Apple's private relay address. On our
+        backend we store a user record containing the identifier Apple gives us, that email
+        or relay address, and a per-day count of how many analyses you've run (used only to
+        enforce the daily limit). Your meals, photos and descriptions are never attached to
+        this record.
       </p>
 
       <h2>What stays on your device</h2>
       <p>
         Your meal log and profile (height, weight, age, activity level, goal) are stored
-        only in the app's local storage on your device. They are never uploaded to us. If
-        you delete the app or clear your log in Settings, that data is gone — we don't keep
-        a copy anywhere.
+        only in the app's local storage on your device, along with your sign-in session
+        token. They are never uploaded to us. If you delete the app or clear your log in
+        Settings, that local data is gone — we don't keep a copy anywhere.
+      </p>
+
+      <h2>Apple Health</h2>
+      <p>
+        If you grant permission, eatnibble reads — read-only — the active energy you've
+        burned so far today from Apple Health, and adds it to your remaining calorie budget
+        for a more accurate number. This data stays on your device and is never sent to our
+        backend or any third party. You can decline this without losing any other
+        functionality, and revoke it at any time in the Health app.
       </p>
 
       <h2>Third-party services</h2>
       <p>
-        We use Google's Gemini API to analyze the photo or text you submit. Google's own
-        terms and privacy practices apply to that processing. We don't use any analytics,
-        advertising or tracking SDKs in the app.
+        We use Google's Gemini API to analyze the photo or text you submit; Google's own
+        terms and privacy practices apply to that processing. Sign in with Apple is handled
+        by Apple. Our backend is hosted on Vercel. We don't use any analytics, advertising
+        or tracking SDKs in the app.
       </p>
 
-      <h2>Accounts</h2>
+      <h2>Deleting your data</h2>
       <p>
-        eatnibble doesn't require an account, sign-in, or email address to use. There is
-        nothing tying your log to an identity on our end.
+        <strong>Clear log</strong> (Profile → Settings) erases the meal entries stored on
+        your device. <strong>Delete Account</strong> (Profile → Settings) permanently
+        deletes your backend account and its daily analysis history — this can't be undone.
+        Deleting the app removes all remaining local data. Revoking eatnibble's access to
+        your Apple ID in iOS Settings signs you out the next time you open the app.
       </p>
 
       <h2>Children's privacy</h2>
