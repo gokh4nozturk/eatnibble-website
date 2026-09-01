@@ -1,0 +1,13 @@
+{
+  "name": "eatnibble",
+  "short_name": "eatnibble",
+  "icons": [
+    { "src": "/icons/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icons/icon-512.png", "type": "image/png", "sizes": "512x512" },
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" }
+  ],
+  "theme_color": "#16a34a",
+  "background_color": "#000000",
+  "display": "standalone",
+  "start_url": "/"
+}
