@@ -200,13 +200,14 @@ h1 {
 }
 
 .phone-screen {
+  position: relative;
   background: #000;
   border-radius: 30px;
   padding: 18px 16px 22px;
   min-height: 480px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .phone-status {
@@ -214,48 +215,28 @@ h1 {
   justify-content: space-between;
   font-size: 11px;
   color: var(--text-secondary);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
-.phone-title {
+.phone-head {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-}
-
-.phone-title strong {
-  font-size: 17px;
-  letter-spacing: -0.01em;
-}
-
-.phone-title span {
-  color: var(--brand);
-  font-weight: 700;
-  font-size: 13px;
-}
-
-.phone-btn-row {
-  display: flex;
-  gap: 8px;
-}
-
-.phone-btn {
-  flex: 1;
-  height: 34px;
-  border-radius: 999px;
-  background: var(--brand);
-  display: flex;
   align-items: center;
-  justify-content: center;
+}
+
+.phone-streak {
   font-size: 11px;
   font-weight: 700;
-  color: #06210e;
+  color: var(--orange);
+  background: rgba(255, 159, 10, 0.15);
+  padding: 3px 9px;
+  border-radius: 999px;
 }
 
-.phone-btn.outline {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-secondary);
+.phone-today {
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 12px;
 }
 
 .phone-card {
@@ -264,73 +245,258 @@ h1 {
   padding: 12px;
 }
 
-.phone-kcal {
-  font-size: 26px;
-  font-weight: 800;
-  margin: 2px 0 6px;
+/* Goal gauge card */
+
+.phone-goal {
+  background: linear-gradient(0deg, rgba(22, 163, 74, 0.16), rgba(22, 163, 74, 0.04));
+  border: 1px solid rgba(22, 163, 74, 0.22);
+  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
 }
 
-.phone-macros {
-  font-size: 11px;
+.phone-gauge {
+  position: relative;
+  width: 112px;
+  flex-shrink: 0;
+}
+
+.phone-gauge svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.phone-gauge circle {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.gauge-track {
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-dasharray: 267.9 326.7;
+}
+
+.gauge-fill {
+  stroke: var(--brand);
+  stroke-dasharray: 169.7 326.7;
+}
+
+.phone-gauge-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  transform: translateY(2px);
+}
+
+.phone-gauge-label {
+  font-size: 9px;
   color: var(--text-secondary);
-  margin-bottom: 10px;
 }
 
-.phone-save {
-  height: 30px;
+.phone-gauge-value {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.phone-gauge-goal {
+  font-size: 8px;
+  color: var(--text-secondary);
+}
+
+.phone-gauge-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  width: 44px;
+}
+
+.phone-gauge-side span {
+  font-size: 9px;
+  color: var(--text-secondary);
+}
+
+.phone-gauge-side strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Macro cards */
+
+.phone-macro-row {
+  display: flex;
+  gap: 8px;
+}
+
+.phone-macro {
+  flex: 1;
+  background: var(--bg-elevated);
+  border-radius: 10px;
+  padding: 9px 9px 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.phone-macro-name {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.phone-macro-val {
+  font-size: 9px;
+  color: var(--text-secondary);
+}
+
+.phone-macro-bar {
+  height: 4px;
   border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.phone-macro-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+}
+
+.phone-macro-bar i.green {
+  background: var(--brand);
+}
+
+.phone-macro-bar i.blue {
   background: var(--blue);
 }
 
-.phone-rings {
+.phone-macro-bar i.orange {
+  background: var(--orange);
+}
+
+/* Last meal card */
+
+.phone-meal-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.phone-meal-row {
   display: flex;
-  gap: 14px;
-  margin-top: 10px;
-}
-
-.ring {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 3px solid var(--border);
-  position: relative;
-}
-
-.ring::after {
-  content: "";
-  position: absolute;
-  inset: -3px;
-  border-radius: 50%;
-  border: 3px solid var(--brand);
-  clip-path: inset(0 0 35% 0);
-}
-
-.ring.blue::after {
-  border-color: var(--blue);
-  clip-path: inset(0 45% 0 0);
-}
-
-.ring.orange::after {
-  border-color: var(--orange);
-  clip-path: inset(0 0 0 60%);
-}
-
-.phone-bars {
-  display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 8px;
-  height: 46px;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
-.phone-bars span {
+.phone-meal-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--brand-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.phone-meal-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
   flex: 1;
-  border-radius: 3px;
-  background: #2c2c2e;
 }
 
-.phone-bars span.on {
-  background: var(--brand);
+.phone-meal-text strong {
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.phone-meal-text span {
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+.phone-meal-macros {
+  font-size: 9px !important;
+  color: rgba(154, 154, 158, 0.7) !important;
+}
+
+.phone-meal-add {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--brand-dim);
+  color: var(--brand);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Water card */
+
+.phone-water {
+  padding-right: 58px;
+}
+
+.phone-water-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.phone-water-glasses {
+  display: flex;
+  gap: 5px;
+}
+
+.phone-water-glasses i {
+  flex: 1;
+  height: 16px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.phone-water-glasses i.on {
+  background: var(--blue);
+}
+
+/* Floating action button */
+
+.phone-fab {
+  position: absolute;
+  right: 16px;
+  bottom: 18px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, var(--brand), #0f7a37);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px -6px rgba(22, 163, 74, 0.6);
 }
 
 /* Sections */

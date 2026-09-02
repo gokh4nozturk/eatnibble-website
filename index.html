@@ -67,41 +67,77 @@
             <span>9:41</span>
             <span>●●●</span>
           </div>
-          <div class="phone-title">
-            <strong>eatnibble</strong>
-            <span>1,419 kcal</span>
+
+          <div class="phone-head">
+            <span class="phone-streak">🔥 5</span>
+            <span class="phone-today">1,419 kcal</span>
           </div>
-          <div class="phone-btn-row">
-            <div class="phone-btn">Take photo</div>
-            <div class="phone-btn outline">Gallery</div>
-          </div>
-          <div class="phone-btn outline" style="text-align:center;">Describe what you ate</div>
-          <div class="phone-card">
-            <div style="font-size:12px;color:var(--text-secondary);">Turkish Dondurma</div>
-            <div class="phone-kcal">300 kcal</div>
-            <div class="phone-macros">P 6g · C 42g · F 12g</div>
-            <div class="phone-save"></div>
-          </div>
-          <div class="phone-card">
-            <div style="font-size:12px;color:var(--text-secondary);margin-bottom:6px;">Today's goal</div>
-            <div class="phone-rings">
-              <div class="ring blue"></div>
-              <div class="ring"></div>
-              <div class="ring orange"></div>
+
+          <div class="phone-card phone-goal">
+            <div class="phone-gauge-side">
+              <span>Consumed</span>
+              <strong>1,419</strong>
+            </div>
+            <div class="phone-gauge">
+              <svg viewBox="0 0 120 120">
+                <circle class="gauge-track" cx="60" cy="60" r="52" transform="rotate(122.4 60 60)" />
+                <circle class="gauge-fill" cx="60" cy="60" r="52" transform="rotate(122.4 60 60)" />
+              </svg>
+              <div class="phone-gauge-center">
+                <span class="phone-gauge-label">Remaining</span>
+                <span class="phone-gauge-value">821</span>
+                <span class="phone-gauge-goal">Goal 2,000 kcal</span>
+              </div>
+            </div>
+            <div class="phone-gauge-side">
+              <span>Burned</span>
+              <strong>240</strong>
             </div>
           </div>
-          <div class="phone-card">
-            <div style="font-size:12px;color:var(--text-secondary);margin-bottom:6px;">Last 7 days</div>
-            <div class="phone-bars">
-              <span style="height:30%"></span>
-              <span style="height:55%"></span>
-              <span style="height:20%"></span>
-              <span style="height:0%"></span>
-              <span style="height:45%"></span>
-              <span style="height:15%"></span>
-              <span class="on" style="height:75%"></span>
+
+          <div class="phone-macro-row">
+            <div class="phone-macro">
+              <span class="phone-macro-name">Carbs</span>
+              <span class="phone-macro-val">150/250g</span>
+              <span class="phone-macro-bar"><i class="green" style="width:60%"></i></span>
+            </div>
+            <div class="phone-macro">
+              <span class="phone-macro-name">Protein</span>
+              <span class="phone-macro-val">82/150g</span>
+              <span class="phone-macro-bar"><i class="blue" style="width:55%"></i></span>
+            </div>
+            <div class="phone-macro">
+              <span class="phone-macro-name">Fat</span>
+              <span class="phone-macro-val">40/67g</span>
+              <span class="phone-macro-bar"><i class="orange" style="width:60%"></i></span>
             </div>
           </div>
+
+          <div class="phone-card phone-meal">
+            <span class="phone-meal-label">Last meal</span>
+            <div class="phone-meal-row">
+              <span class="phone-meal-icon">🍴</span>
+              <div class="phone-meal-text">
+                <strong>Turkish Dondurma</strong>
+                <span>14:20 · 300 kcal</span>
+                <span class="phone-meal-macros">P 6 · C 42 · F 12</span>
+              </div>
+              <span class="phone-meal-add">+</span>
+            </div>
+          </div>
+
+          <div class="phone-card phone-water">
+            <div class="phone-water-head">
+              <span>Water</span>
+              <span>5/8</span>
+            </div>
+            <div class="phone-water-glasses">
+              <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i>
+              <i class="on"></i><i></i><i></i><i></i>
+            </div>
+          </div>
+
+          <span class="phone-fab">+</span>
         </div>
       </div>
     </div>
