@@ -253,13 +253,12 @@ h1 {
   padding: 12px 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 4px;
+  gap: 2px;
 }
 
 .phone-gauge {
   position: relative;
-  width: 112px;
+  width: 106px;
   flex-shrink: 0;
 }
 
@@ -313,15 +312,16 @@ h1 {
 }
 
 .phone-gauge-side {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1px;
-  width: 44px;
 }
 
 .phone-gauge-side span {
-  font-size: 9px;
+  font-size: 8px;
   color: var(--text-secondary);
 }
 
