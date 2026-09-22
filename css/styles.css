@@ -645,7 +645,8 @@ footer .wrap {
 
 .footer-links {
   display: flex;
-  gap: 22px;
+  flex-wrap: wrap;
+  gap: 12px 22px;
   font-size: 14px;
   color: var(--text-secondary);
 }
