@@ -248,7 +248,12 @@ p {
 .store-badge img {
   display: block;
   width: auto;
-  height: 54px;
+  height: 60px;
+}
+
+.hero-actions .btn {
+  min-height: 60px;
+  padding-inline: 28px;
 }
 
 .text-link {
