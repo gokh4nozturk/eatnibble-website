@@ -2178,6 +2178,24 @@ footer .wrap {
     display: none;
   }
 
+  /* Phone: the badge is the only button; the AI CTA becomes a text link under it */
+  .hero-actions {
+    gap: 8px;
+  }
+
+  .hero-actions .btn-ghost {
+    min-height: 44px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--brand-text);
+    font-size: 17px;
+  }
+
+  .hero-actions .btn-ghost::after {
+    content: "→";
+  }
+
   .ways,
   .minis {
     grid-template-columns: 1fr;
