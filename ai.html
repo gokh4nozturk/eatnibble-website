@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connect an AI assistant — eatnibble</title>
+  <meta name="description" content="How to connect eatnibble to Claude, ChatGPT and other AI assistants, what they can do, and how your data is handled." />
+  <link rel="canonical" href="https://eatnibble.app/ai.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="eatnibble" />
+  <meta property="og:url" content="https://eatnibble.app/ai.html" />
+  <meta property="og:title" content="Connect an AI assistant — eatnibble" />
+  <meta property="og:description" content="How to connect eatnibble to Claude, ChatGPT and other AI assistants, what they can do, and how your data is handled." />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/icons/icon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#16a34a" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 512 512" width="18" height="18">
+            <mask id="navMark"><rect width="512" height="512" fill="#000"/><circle cx="238" cy="262" r="160" fill="#fff"/><circle cx="362" cy="150" r="92" fill="#000"/></mask>
+            <g fill="#fff"><rect width="512" height="512" mask="url(#navMark)"/><circle cx="396" cy="298" r="19"/><circle cx="438" cy="346" r="12"/></g>
+          </svg>
+        </span>
+        eatnibble
+      </a>
+      <div class="nav-links">
+        <a href="/#features">Features</a>
+        <a href="/#how-it-works">How it works</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </div>
+      <a class="btn btn-primary btn-sm" href="mailto:support@eatnibble.app">Email us</a>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <div class="wrap">
+      <h1>Connect an AI assistant</h1>
+      <p class="updated">Log meals and check your day from Claude, ChatGPT and other assistants.</p>
+
+      <div class="faq-item">
+        <h2>What it does</h2>
+        <p>
+          Connect eatnibble to an AI assistant and tell it what you ate, e.g. "I had two boiled
+          eggs and a slice of toast for breakfast." The assistant estimates each item's portion,
+          calories, protein, carbs and fat and saves the meal to your eatnibble diary. It appears
+          in the app the next time you open it. You can also ask "What have I eaten today?" or
+          "Show my meals from the last 3 days."
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h2>What you need</h2>
+        <p>
+          The eatnibble iPhone app, signed in with Apple, and an assistant
+          that supports MCP connectors, such as Claude or ChatGPT. The server address is:
+        </p>
+        <p><code>https://eatnibble-backend.vercel.app/mcp</code></p>
+      </div>
+
+      <div class="faq-item">
+        <h2>Connect in Claude</h2>
+        <p>
+          Open Settings → Connectors. Find eatnibble in the directory, or choose "Add custom
+          connector" and paste the server address above. Select Connect: a page titled "Connect
+          eatnibble" opens with a 6-digit code.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h2>Connect in ChatGPT and other assistants</h2>
+        <p>
+          In ChatGPT, add eatnibble from the plugin directory. In other assistants
+          that support remote MCP servers (for example Gemini, Grok or Cursor), add a custom
+          connector with the server address above. Each one shows the same 6-digit code page.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h2>Approve the connection on your iPhone</h2>
+        <p>
+          In the eatnibble app, go to Settings → AI Connections → Connect an Assistant and enter
+          the 6-digit code. The app shows which assistant is asking and what it will be able to
+          do. Tap Connect, and the browser page returns you to your assistant. The code expires
+          after 10 minutes.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h2>What the assistant can do</h2>
+        <p>
+          <strong>Log a meal</strong> (<code>log_meal</code>): adds one meal with its items and
+          estimated calories and macros. It never changes or deletes existing meals; edit or
+          delete them in the app.<br />
+          <strong>Today's summary</strong> (<code>get_today_summary</code>): today's meals and
+          the calories and macros eaten so far.<br />
+          <strong>Recent meals</strong> (<code>get_recent_meals</code>): meals and daily totals
+          for up to the last 7 days.
+        </p>
+        <p>
+          Your daily goal isn't shared, so ask with your own target in mind, e.g. "How much
+          protein do I still need to reach 120 g?"
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h2>Your data</h2>
+        <p>
+          Your food log stays on your iPhone. While an assistant is connected, the app shares a
+          short summary of the last 7 days of meals (name, time and totals) so the assistant can
+          answer questions, and meals the assistant logs wait on our server only until the app
+          picks them up. Meal photos, your profile, your daily goal and any Apple Health data are
+          never shared. See the <a class="inline" href="privacy.html">Privacy Policy</a> for
+          details.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h2>Disconnect</h2>
+        <p>
+          In the app, go to Settings → AI Connections, swipe the assistant (or open it) and
+          choose Disconnect. When the last assistant is removed, the summary on our server is
+          deleted. Deleting your account removes everything.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h2>Troubleshooting</h2>
+        <p>
+          <strong>"Code not valid"</strong>: codes expire after 10 minutes. Start the
+          connection again in your assistant to get a new one.<br />
+          <strong>A logged meal isn't in the app yet</strong>: open the app, or bring it to the
+          foreground, to pull new meals.<br />
+          <strong>The assistant doesn't see a meal I logged in the app</strong>: open the app
+          once so it can update the summary.
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <h2>Still need help?</h2>
+        <p>
+          Email us at
+          <a class="inline" href="mailto:support@eatnibble.app">support@eatnibble.app</a>
+          and we'll get back to you.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-copy">© 2026 eatnibble</div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:support@eatnibble.app">support@eatnibble.app</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
