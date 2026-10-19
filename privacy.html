@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — eatnibble</title>
-  <meta name="description" content="How eatnibble handles your meal photos, descriptions, log data, sign-in and Apple Health access." />
+  <meta name="description" content="How eatnibble handles your meal photos, descriptions, log data, sign-in, Apple Health access and AI assistant connections." />
   <link rel="canonical" href="https://eatnibble.app/privacy.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="eatnibble" />
   <meta property="og:url" content="https://eatnibble.app/privacy.html" />
   <meta property="og:title" content="Privacy Policy — eatnibble" />
-  <meta property="og:description" content="How eatnibble handles your meal photos, descriptions, log data, sign-in and Apple Health access." />
+  <meta property="og:description" content="How eatnibble handles your meal photos, descriptions, log data, sign-in, Apple Health access and AI assistant connections." />
   <meta name="twitter:card" content="summary" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/icons/icon-32.png" sizes="32x32" type="image/png" />
@@ -46,7 +46,7 @@
   <main class="doc">
     <div class="wrap">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 11 October 2026</p>
+      <p class="updated">Last updated: 19 October 2026</p>
 
       <p>
         eatnibble is a calorie and macro tracker. This page explains, in plain terms, what
@@ -74,7 +74,8 @@
         backend we store a user record containing the identifier Apple gives us, that email
         or relay address, and a per-day count of how many analyses you've run (used only to
         enforce the daily limit). Your meals, photos and descriptions are never attached to
-        this record.
+        this record — the only exception is the optional AI assistant connection described
+        below, and only while you use it.
       </p>
 
       <h2>What stays on your device</h2>
@@ -82,13 +83,55 @@
         Your meal log, the photos attached to your meals, your daily water count, your
         reminder settings and your profile (height, weight, age, sex, activity level, goal,
         water goal) are stored only in the app's local storage on your device, along with
-        your sign-in session token. They are never uploaded to us. If you delete the app or
-        clear your log in Settings, that local data is gone — we don't keep a copy anywhere.
+        your sign-in session token. They are never uploaded to us unless you connect an AI
+        assistant (see the next section), and even then only the limited summary described
+        there. If you delete the app or clear your log in Settings, that local data is gone —
+        we don't keep a copy anywhere.
       </p>
       <p>
         <strong>Export data</strong> (Profile → Settings) creates a file of your profile,
         log and water history on your device. Where it goes from there is up to you — it's
         only shared through the iOS share sheet when you choose to.
+      </p>
+
+      <h2>Connecting an AI assistant (optional)</h2>
+      <p>
+        You can connect an AI assistant that supports the Model Context Protocol — for
+        example ChatGPT, Claude, Gemini, Grok or Cursor — so it can log meals for you and
+        answer questions about your day. Connecting is entirely optional, requires signing
+        in, and happens only when you approve the assistant's 6-digit code in the app
+        (Profile → Settings → AI Connections). Nothing below applies if you never connect one.
+      </p>
+      <p>While at least one assistant is connected, our backend stores:</p>
+      <ul>
+        <li><strong>The connection:</strong> the assistant's name, when you connected it, and
+          the security tokens it uses — stored only as one-way hashes, never in readable form.
+          The same applies to a personal key, if you create one for developer tools.</li>
+        <li><strong>Meals the assistant logs:</strong> the meal name, time, food items with
+          their estimated grams and calories/macros, and any note. They wait on our backend
+          only until the eatnibble app next opens and adds them to your log, and are then
+          deleted from our backend.</li>
+        <li><strong>A summary of your log:</strong> so the assistant can answer questions
+          like "how many calories do I have left today?", the app uploads your time zone,
+          today's date, your daily calorie and macro goal, and the meals of the last 7 days
+          (name, time and calorie/macro totals — no photos). Each update replaces the previous
+          one. The app doesn't upload it at all while no assistant is connected, and we delete
+          it when you remove your last connection.</li>
+      </ul>
+      <p>
+        <strong>Never shared with an assistant or stored on our backend:</strong> your meal
+        photos, and any data from Apple Health (such as calories burned, water, height, weight
+        or age).
+      </p>
+      <p>
+        The assistant itself is a third-party service. What you tell it, and what it reads
+        through eatnibble when you ask it to, is processed by its provider (for example
+        OpenAI, Anthropic, Google, xAI or Anysphere) under that provider's own terms and
+        privacy policy — we don't control how they handle it.
+      </p>
+      <p>
+        You can disconnect an assistant at any time in AI Connections; it immediately loses
+        access, and removing the last one deletes the summary from our backend.
       </p>
 
       <h2>Photos</h2>
@@ -125,8 +168,8 @@
         write height and weight, but doesn't currently write them.
       </p>
       <p>
-        Health data stays on your device and is never sent to our backend or any third party,
-        nor used for advertising. You can decline any of these permissions without losing the
+        Health data stays on your device and is never sent to our backend, to a connected AI
+        assistant or any other third party, nor used for advertising. You can decline any of these permissions without losing the
         rest of the app, and change them at any time in the Health app or iOS Settings.
       </p>
 
@@ -134,7 +177,8 @@
       <p>
         We use Google's Gemini API to analyze the photo or text you submit; Google's own
         terms and privacy practices apply to that processing. Sign in with Apple is handled
-        by Apple. Our backend is hosted on Vercel. We don't use any analytics, advertising
+        by Apple. If you connect an AI assistant, its provider processes your conversations
+        with it under its own terms, as described above. Our backend is hosted on Vercel. We don't use any analytics, advertising
         or tracking SDKs in the app.
       </p>
 
@@ -143,7 +187,9 @@
         <strong>Clear log</strong> (Profile → Settings) erases the meal entries, meal photos
         and water history stored on your device (photos already saved to your Photos album
         stay there until you delete them). <strong>Delete Account</strong> (Profile → Settings) permanently
-        deletes your backend account and its daily analysis history — this can't be undone.
+        deletes your backend account, its daily analysis history and everything stored for AI
+        assistant connections (connections, personal key, pending meals and the summary) —
+        this can't be undone.
         Deleting the app removes all remaining local data. Revoking eatnibble's access to
         your Apple ID in iOS Settings signs you out the next time you open the app.
       </p>
