@@ -45,7 +45,8 @@ System stack (SF Pro on Apple devices). Headlines 700, letter-spacing −0.035em
 
 ## Components
 
-- **Buttons:** pill. `.btn-primary` green, `.btn-ghost` hairline, `.btn-store` inverted (text color as background) two-line "Download on the / App Store". Swap `.btn-store` for Apple's official badge SVG when available.
+- **Buttons:** pill. `.btn-primary` green, `.btn-ghost` hairline, no hand-made App Store buttons.
+- **App Store badge:** Apple's official SVGs in `icons/` (`app-store-badge-black.svg` for light, `-white.svg` for dark via `<picture>`), never edited, recolored or redrawn — only scaled (60px tall, min 40px; the button next to it in the hero matches that height) with clear space around it. Re-download from Apple's marketing toolbox if the artwork changes.
 - **Eyebrow:** small green pill above a section's `h2`.
 - **Feature split:** text column + mock UI column, alternating sides on desktop, stacked on mobile.
 - **Motion:** elements with `.reveal` fade/rise once when scrolled into view (JS adds `.js` on `<html>`; without JS everything is visible). All motion is off under `prefers-reduced-motion`.
