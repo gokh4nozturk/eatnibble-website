@@ -49,4 +49,5 @@ System stack (SF Pro on Apple devices). Headlines 700, letter-spacing −0.035em
 - **Eyebrow:** small green pill above a section's `h2`.
 - **Feature split:** text column + mock UI column, alternating sides on desktop, stacked on mobile.
 - **Motion:** elements with `.reveal` fade/rise once when scrolled into view (JS adds `.js` on `<html>`; without JS everything is visible). All motion is off under `prefers-reduced-motion`.
+- **Assistant picker (ai.html):** five equal logo tiles (`role=tablist`, arrow keys, `#<id>` deep link). Every guide is in the HTML; JS only hides the unselected ones, so without JS all guides show stacked.
 - Focus: 2px `--brand-text` outline with 3px offset on every interactive element.

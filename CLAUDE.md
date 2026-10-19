@@ -8,7 +8,7 @@ Static marketing site for the eatnibble iOS app, served at `https://eatnibble.ap
 
 - Never delete, rename or move it, and never turn it into a redirect — keep the exact path `ai.html`.
 - It must always explain, as readable page text (not only in images or behind JavaScript): what the connection does, what you need (signed-in app + the server URL `https://eatnibble-backend.vercel.app/mcp`), setup steps for each assistant, approving the 6-digit code in the app, what the assistant can and can't do (`log_meal`, `get_today_summary`, `get_recent_meals`; never edits/deletes meals), how data is handled, how to disconnect, and troubleshooting.
-- A redesign may change its look and layout, but not drop any of the above.
+- A redesign may change its look and layout, but not drop any of the above. The assistant picker is progressive enhancement: all five guides stay in the HTML (JS only hides unselected ones), and `ai.html#<assistant>` (`chatgpt`, `claude`, `gemini`, `grok`, `cursor`) opens that guide — the home page logos link there.
 - Keep the per-assistant steps in sync with the iOS app's in-app guide (`ai_guide_<id>_<n>` strings in `eatnibble-ios`, `AIAssistantGuideView`).
 
 ## Structure

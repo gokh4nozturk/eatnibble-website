@@ -1,16 +1,19 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Connect an AI assistant — eatnibble</title>
-  <meta name="description" content="How to connect eatnibble to Claude, ChatGPT and other AI assistants, what they can do, and how your data is handled." />
+  <meta name="description"
+    content="How to connect eatnibble to ChatGPT, Claude, Gemini, Grok and Cursor, what they can do, and how your data is handled." />
   <link rel="canonical" href="https://eatnibble.app/ai.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="eatnibble" />
   <meta property="og:url" content="https://eatnibble.app/ai.html" />
   <meta property="og:title" content="Connect an AI assistant — eatnibble" />
-  <meta property="og:description" content="How to connect eatnibble to Claude, ChatGPT and other AI assistants, what they can do, and how your data is handled." />
+  <meta property="og:description"
+    content="Log meals and check your day from ChatGPT, Claude, Gemini, Grok and Cursor." />
   <meta name="twitter:card" content="summary" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/icons/icon-32.png" sizes="32x32" type="image/png" />
@@ -19,9 +22,13 @@
   <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
   <link rel="stylesheet" href="css/styles.css" />
+  <script>document.documentElement.classList.add("js");</script>
 </head>
+
 <body>
-  <nav class="nav">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="nav" aria-label="Main">
     <div class="wrap">
       <a class="brand" href="/">
         <span class="brand-mark" aria-hidden="true">
@@ -38,159 +45,300 @@
         <a href="privacy.html">Privacy</a>
         <a href="support.html">Support</a>
       </div>
-      <a class="btn btn-primary btn-sm" href="mailto:support@eatnibble.app">Email us</a>
+      <a class="btn btn-primary btn-sm" href="#setup">Connect</a>
     </div>
   </nav>
 
-  <main class="doc">
-    <div class="wrap">
-      <h1>Connect an AI assistant</h1>
-      <p class="updated">Log meals and check your day from Claude, ChatGPT and other assistants.</p>
+  <main id="main">
+    <!-- Intro -->
+    <header class="aip-hero">
+      <div class="wrap">
+        <div class="ai-head">
+          <span class="eyebrow">AI assistants</span>
+          <h1>Your food diary,<br /><span class="accent">inside your assistant.</span></h1>
+          <p class="lead">
+            Connect eatnibble to ChatGPT, Claude, Gemini, Grok or Cursor. Tell it what you ate and it estimates each
+            item's portion, calories, protein, carbs and fat, then saves the meal to your eatnibble diary. Ask about
+            your day, and it knows.
+          </p>
+          <div class="aip-actions">
+            <a class="btn btn-primary" href="#setup">Set it up</a>
+            <a class="btn btn-ghost" href="#can-do">What it can do</a>
+          </div>
+        </div>
 
-      <div class="faq-item">
-        <h2>What it does</h2>
-        <p>
-          Connect eatnibble to an AI assistant and tell it what you ate, e.g. "I had two boiled
-          eggs and a slice of toast for breakfast." The assistant estimates each item's portion,
-          calories, protein, carbs and fat and saves the meal to your eatnibble diary. It appears
-          in the app the next time you open it. You can also ask "What have I eaten today?" or
-          "Show my meals from the last 3 days."
+        <div class="ai-scene in" aria-hidden="true">
+          <div class="chat">
+            <div class="chat-bar"><i></i><i></i><i></i><span>New chat</span></div>
+            <div class="chat-body">
+              <p class="bubble user">Had two boiled eggs, a slice of sourdough and a flat white for breakfast</p>
+              <div class="tool">
+                <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+                eatnibble · log_meal
+              </div>
+              <div class="bubble bot">
+                <p>Logged your breakfast — <strong>395 kcal</strong>.</p>
+                <ul>
+                  <li><span>2 boiled eggs · 100 g</span><b>155</b></li>
+                  <li><span>Sourdough · 50 g</span><b>130</b></li>
+                  <li><span>Flat white · 240 ml</span><b>110</b></li>
+                </ul>
+                <p class="muted">P 24g · C 35g · F 18g</p>
+              </div>
+            </div>
+          </div>
+          <div class="ai-arrow">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </div>
+          <div class="app-drop">
+            <span class="app-drop-label">In your eatnibble log</span>
+            <div class="meal-row">
+              <span class="meal-icon">
+                <svg viewBox="0 0 24 24"><path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M16 21V3c-2.2 1.2-3 3.6-3 7v3h3" /></svg>
+              </span>
+              <div class="meal-text">
+                <strong>Breakfast</strong>
+                <span>08:10 · 395 kcal</span>
+              </div>
+            </div>
+            <div class="macro-pills small">
+              <span><i class="dot carbs"></i>C 35g</span>
+              <span><i class="dot protein"></i>P 24g</span>
+              <span><i class="dot fat"></i>F 18g</span>
+            </div>
+            <p class="app-drop-note">Shows up the next time you open the app.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- What it can do -->
+    <section id="can-do" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">What it can do</span>
+          <h2>Three things, done well.</h2>
+        </div>
+        <div class="uses">
+          <article class="use">
+            <p class="use-prompt">“Log a chicken wrap and a Coke Zero for lunch”</p>
+            <h3>Log a meal</h3>
+            <p>Adds one meal with its items and estimated calories and macros. It never changes or deletes existing
+              meals — edit or delete them in the app.</p>
+            <code>log_meal</code>
+          </article>
+          <article class="use">
+            <p class="use-prompt">“What have I eaten today?”</p>
+            <h3>Today's summary</h3>
+            <p>Today's meals and the calories and macros eaten so far.</p>
+            <code>get_today_summary</code>
+          </article>
+          <article class="use">
+            <p class="use-prompt">“Show my meals from the last 3 days”</p>
+            <h3>Recent meals</h3>
+            <p>Meals and daily totals for up to the last 7 days.</p>
+            <code>get_recent_meals</code>
+          </article>
+        </div>
+        <p class="uses-note">
+          Your daily goal isn't shared, so ask with your own target in mind — e.g. “How much protein do I still need to
+          reach 120 g?”
         </p>
       </div>
+    </section>
 
-      <div class="faq-item">
-        <h2>What you need</h2>
-        <p>
-          The eatnibble iPhone app, signed in with Apple, and an assistant
-          that supports MCP connectors, such as Claude or ChatGPT. The server address is:
-        </p>
-        <p><code>https://eatnibble-backend.vercel.app/mcp</code></p>
-      </div>
+    <!-- Setup -->
+    <section id="setup" class="setup">
+      <div class="wrap setup-grid">
+        <div class="setup-intro">
+        <div class="section-head">
+          <span class="eyebrow">Setup</span>
+          <h2>Connect in about a minute.</h2>
+          <p class="lead">
+            You need the eatnibble iPhone app, signed in with Apple, and an assistant that supports MCP connectors.
+          </p>
+        </div>
 
-      <div class="faq-item">
-        <h2>Connect in ChatGPT</h2>
-        <ol>
-          <li>Open Settings → Apps.</li>
-          <li>Find eatnibble in the directory and select Connect. Until it's listed, turn on Developer mode under Advanced settings and create an app with the server address above.</li>
-          <li>Sign in when ChatGPT asks to connect eatnibble.</li>
-          <li>A page opens with a 6-digit code: approve it on your iPhone (below).</li>
-        </ol>
-        <p>Developer mode is available on ChatGPT's paid plans.</p>
-      </div>
+        <div class="server">
+          <div>
+            <span class="server-label">Server address</span>
+            <code id="server-url">https://eatnibble-backend.vercel.app/mcp</code>
+          </div>
+          <button class="btn btn-ghost btn-sm copy-btn" type="button" data-copy="server-url" hidden>Copy</button>
+        </div>
+        </div>
 
-      <div class="faq-item">
-        <h2>Connect in Claude</h2>
-        <ol>
-          <li>Open Settings → Connectors.</li>
-          <li>Find eatnibble in the directory, or choose Add custom connector and paste the server address above.</li>
-          <li>Select Connect next to eatnibble.</li>
-          <li>A page opens with a 6-digit code: approve it on your iPhone (below).</li>
-        </ol>
-        <p>Works on Claude on the web, desktop and mobile.</p>
-      </div>
+        <div class="picker">
+          <div class="picker-tabs" role="tablist" aria-label="Choose your assistant" hidden>
+            <button role="tab" id="tab-chatgpt" aria-controls="chatgpt" aria-selected="true" type="button"><img src="https://eatnibble-backend.vercel.app/client-icons/chatgpt.png?v=2" alt="" width="36" height="36" />ChatGPT</button>
+            <button role="tab" id="tab-claude" aria-controls="claude" aria-selected="false" tabindex="-1" type="button"><img src="https://eatnibble-backend.vercel.app/client-icons/claude.png?v=2" alt="" width="36" height="36" />Claude</button>
+            <button role="tab" id="tab-gemini" aria-controls="gemini" aria-selected="false" tabindex="-1" type="button"><img src="https://eatnibble-backend.vercel.app/client-icons/gemini.png?v=2" alt="" width="36" height="36" />Gemini</button>
+            <button role="tab" id="tab-grok" aria-controls="grok" aria-selected="false" tabindex="-1" type="button"><img src="https://eatnibble-backend.vercel.app/client-icons/grok.png?v=2" alt="" width="36" height="36" />Grok</button>
+            <button role="tab" id="tab-cursor" aria-controls="cursor" aria-selected="false" tabindex="-1" type="button"><img src="https://eatnibble-backend.vercel.app/client-icons/cursor.png?v=2" alt="" width="36" height="36" />Cursor</button>
+          </div>
 
-      <div class="faq-item">
-        <h2>Connect in Gemini</h2>
-        <ol>
-          <li>In the Gemini app, open Settings → Connected apps.</li>
-          <li>Add a custom app and paste the server address above.</li>
-          <li>Select Connect to eatnibble.</li>
-          <li>A page opens with a 6-digit code: approve it on your iPhone (below).</li>
-        </ol>
-        <p>Custom apps aren't available on every Gemini plan yet. If you don't see the option, it hasn't reached your account.</p>
-      </div>
+          <div class="guide" id="chatgpt" role="tabpanel" aria-labelledby="tab-chatgpt">
+            <h3><img src="https://eatnibble-backend.vercel.app/client-icons/chatgpt.png?v=2" alt="" width="32" height="32" loading="lazy" />Connect in ChatGPT</h3>
+            <ol>
+              <li>Open Settings → Apps.</li>
+              <li>Find eatnibble in the directory and select Connect. Until it's listed, turn on Developer mode under Advanced settings and create an app with the server address above.</li>
+              <li>Sign in when ChatGPT asks to connect eatnibble.</li>
+              <li>A page opens with a 6-digit code: approve it on your iPhone (below).</li>
+            </ol>
+            <p class="guide-note">Developer mode is available on ChatGPT's paid plans.</p>
+          </div>
 
-      <div class="faq-item">
-        <h2>Connect in Grok</h2>
-        <ol>
-          <li>On grok.com, open Connectors.</li>
-          <li>Choose New Connector → Custom and paste the server address above.</li>
-          <li>Select Connect to eatnibble.</li>
-          <li>A page opens with a 6-digit code: approve it on your iPhone (below).</li>
-        </ol>
-        <p>Custom connectors need a paid Grok plan.</p>
-      </div>
+          <div class="guide" id="claude" role="tabpanel" aria-labelledby="tab-claude">
+            <h3><img src="https://eatnibble-backend.vercel.app/client-icons/claude.png?v=2" alt="" width="32" height="32" loading="lazy" />Connect in Claude</h3>
+            <ol>
+              <li>Open Settings → Connectors.</li>
+              <li>Find eatnibble in the directory, or choose Add custom connector and paste the server address above.</li>
+              <li>Select Connect next to eatnibble.</li>
+              <li>A page opens with a 6-digit code: approve it on your iPhone (below).</li>
+            </ol>
+            <p class="guide-note">Works on Claude on the web, desktop and mobile.</p>
+          </div>
 
-      <div class="faq-item">
-        <h2>Connect in Cursor</h2>
-        <ol>
-          <li>Open Settings → MCP.</li>
-          <li>Add a new MCP server named eatnibble with the server address above as its URL.</li>
-          <li>Select Connect or Login next to eatnibble.</li>
-          <li>A page opens with a 6-digit code: approve it on your iPhone (below).</li>
-        </ol>
-        <p>Cursor opens the connection page in your browser.</p>
-      </div>
+          <div class="guide" id="gemini" role="tabpanel" aria-labelledby="tab-gemini">
+            <h3><img src="https://eatnibble-backend.vercel.app/client-icons/gemini.png?v=2" alt="" width="32" height="32" loading="lazy" />Connect in Gemini</h3>
+            <ol>
+              <li>In the Gemini app, open Settings → Connected apps.</li>
+              <li>Add a custom app and paste the server address above.</li>
+              <li>Select Connect to eatnibble.</li>
+              <li>A page opens with a 6-digit code: approve it on your iPhone (below).</li>
+            </ol>
+            <p class="guide-note">Custom apps aren't available on every Gemini plan yet. If you don't see the option, it hasn't reached your account.</p>
+          </div>
 
-      <div class="faq-item">
-        <h2>Approve the connection on your iPhone</h2>
-        <p>
-          In the eatnibble app, go to Settings → AI Connections → Connect an Assistant and enter
-          the 6-digit code. The app shows which assistant is asking and what it will be able to
-          do. Tap Connect, and the browser page returns you to your assistant. The code expires
-          after 10 minutes.
-        </p>
-      </div>
+          <div class="guide" id="grok" role="tabpanel" aria-labelledby="tab-grok">
+            <h3><img src="https://eatnibble-backend.vercel.app/client-icons/grok.png?v=2" alt="" width="32" height="32" loading="lazy" />Connect in Grok</h3>
+            <ol>
+              <li>On grok.com, open Connectors.</li>
+              <li>Choose New Connector → Custom and paste the server address above.</li>
+              <li>Select Connect to eatnibble.</li>
+              <li>A page opens with a 6-digit code: approve it on your iPhone (below).</li>
+            </ol>
+            <p class="guide-note">Custom connectors need a paid Grok plan.</p>
+          </div>
 
-      <div class="faq-item">
-        <h2>What the assistant can do</h2>
-        <p>
-          <strong>Log a meal</strong> (<code>log_meal</code>): adds one meal with its items and
-          estimated calories and macros. It never changes or deletes existing meals; edit or
-          delete them in the app.<br />
-          <strong>Today's summary</strong> (<code>get_today_summary</code>): today's meals and
-          the calories and macros eaten so far.<br />
-          <strong>Recent meals</strong> (<code>get_recent_meals</code>): meals and daily totals
-          for up to the last 7 days.
-        </p>
-        <p>
-          Your daily goal isn't shared, so ask with your own target in mind, e.g. "How much
-          protein do I still need to reach 120 g?"
-        </p>
+          <div class="guide" id="cursor" role="tabpanel" aria-labelledby="tab-cursor">
+            <h3><img src="https://eatnibble-backend.vercel.app/client-icons/cursor.png?v=2" alt="" width="32" height="32" loading="lazy" />Connect in Cursor</h3>
+            <ol>
+              <li>Open Settings → MCP.</li>
+              <li>Add a new MCP server named eatnibble with the server address above as its URL.</li>
+              <li>Select Connect or Login next to eatnibble.</li>
+              <li>A page opens with a 6-digit code: approve it on your iPhone (below).</li>
+            </ol>
+            <p class="guide-note">Cursor opens the connection page in your browser.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="faq-item">
-        <h2>Your data</h2>
-        <p>
-          Your food log stays on your iPhone. While an assistant is connected, the app shares a
-          short summary of the last 7 days of meals (name, time and totals) so the assistant can
-          answer questions, and meals the assistant logs wait on our server only until the app
-          picks them up. Meal photos, your profile, your daily goal and any Apple Health data are
-          never shared. See the <a class="inline" href="privacy.html">Privacy Policy</a> for
-          details.
-        </p>
+    <!-- Approve -->
+    <section id="approve" class="section">
+      <div class="wrap split">
+        <div class="split-copy">
+          <span class="eyebrow">Last step</span>
+          <h2>Approve the connection on your iPhone.</h2>
+          <p class="lead">
+            In the eatnibble app, go to Settings → AI Connections → Connect an Assistant and enter the 6-digit code.
+          </p>
+          <p>
+            The app shows which assistant is asking and what it will be able to do. Tap Connect, and the browser page
+            returns you to your assistant. The code expires after 10 minutes.
+          </p>
+        </div>
+        <div class="approve-visual" aria-hidden="true">
+          <div class="mock-card code-page">
+            <span class="code-label">Your code</span>
+            <div class="code-digits"><i>4</i><i>8</i><i>2</i><i>9</i><i>1</i><i>3</i></div>
+            <span class="code-wait"><span class="spinner"></span>Waiting for approval in the app…</span>
+          </div>
+          <div class="consent">
+            <div class="consent-pair">
+              <img src="https://eatnibble-backend.vercel.app/client-icons/claude.png?v=2" alt="" width="52" height="52" />
+              <span class="consent-dots"><i></i><i></i><i></i></span>
+              <span class="brand-mark consent-app">
+                <svg viewBox="0 0 512 512" width="30" height="30">
+                  <mask id="consentMark"><rect width="512" height="512" fill="#000"/><circle cx="238" cy="262" r="160" fill="#fff"/><circle cx="362" cy="150" r="92" fill="#000"/></mask>
+                  <g fill="#fff"><rect width="512" height="512" mask="url(#consentMark)"/><circle cx="396" cy="298" r="19"/><circle cx="438" cy="346" r="12"/></g>
+                </svg>
+              </span>
+            </div>
+            <strong class="consent-title">Connect Claude?</strong>
+            <span class="consent-verified">
+              <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+              Verified · claude.ai
+            </span>
+            <ul>
+              <li>Add meals to your diary</li>
+              <li>Read today and your last 7 days</li>
+            </ul>
+            <span class="consent-btn">Connect</span>
+            <span class="consent-deny">Deny</span>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="faq-item">
-        <h2>Disconnect</h2>
-        <p>
-          In the app, go to Settings → AI Connections, swipe the assistant (or open it) and
-          choose Disconnect. When the last assistant is removed, the summary on our server is
-          deleted. Deleting your account removes everything.
-        </p>
+    <!-- Data + disconnect -->
+    <section class="section section-tight">
+      <div class="wrap">
+        <div class="facts">
+          <div class="fact">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.5" /><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" /></svg>
+            <h2>Your data</h2>
+            <p>
+              Your food log stays on your iPhone. While an assistant is connected, the app shares a short summary of
+              the last 7 days of meals (name, time and totals) so the assistant can answer questions, and meals the
+              assistant logs wait on our server only until the app picks them up. Meal photos, your profile, your
+              daily goal and any Apple Health data are never shared. See the
+              <a class="inline" href="privacy.html">Privacy Policy</a> for details.
+            </p>
+          </div>
+          <div class="fact">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7.5L7.5 6a4 4 0 0 0-5.6 5.6L4.5 14M15 16.5l1.5 1.5a4 4 0 0 0 5.6-5.6L19.5 10" /><path d="M4 4l16 16" /></svg>
+            <h2>Disconnect</h2>
+            <p>
+              In the app, go to Settings → AI Connections, swipe the assistant (or open it) and choose Disconnect.
+              When the last assistant is removed, the summary on our server is deleted. Deleting your account removes
+              everything.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="faq-item">
-        <h2>Troubleshooting</h2>
-        <p>
-          <strong>"Code not valid"</strong>: codes expire after 10 minutes. Start the
-          connection again in your assistant to get a new one.<br />
-          <strong>A logged meal isn't in the app yet</strong>: open the app, or bring it to the
-          foreground, to pull new meals.<br />
-          <strong>The assistant doesn't see a meal I logged in the app</strong>: open the app
-          once so it can update the summary.
-        </p>
+    <!-- Troubleshooting -->
+    <section id="troubleshooting" class="section section-tight">
+      <div class="wrap trouble">
+        <div class="trouble-side">
+          <h2>Troubleshooting</h2>
+          <div class="contact-card">
+            <h3>Still need help?</h3>
+            <p>
+              Email us at <a class="inline" href="mailto:support@eatnibble.app">support@eatnibble.app</a> and we'll get
+              back to you.
+            </p>
+          </div>
+        </div>
+        <div class="trouble-list">
+        <details>
+          <summary>“Code not valid”</summary>
+          <p>Codes expire after 10 minutes. Start the connection again in your assistant to get a new one.</p>
+        </details>
+        <details>
+          <summary>A logged meal isn't in the app yet</summary>
+          <p>Open the app, or bring it to the foreground, to pull new meals.</p>
+        </details>
+        <details>
+          <summary>The assistant doesn't see a meal I logged in the app</summary>
+          <p>Open the app once so it can update the summary.</p>
+        </details>
+        </div>
       </div>
-
-      <div class="contact-card">
-        <h2>Still need help?</h2>
-        <p>
-          Email us at
-          <a class="inline" href="mailto:support@eatnibble.app">support@eatnibble.app</a>
-          and we'll get back to you.
-        </p>
-      </div>
-    </div>
+    </section>
   </main>
 
   <footer>
@@ -205,5 +353,59 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      // Assistant picker: every guide is plain page text; with JS only the selected one is shown.
+      var tablist = document.querySelector(".picker-tabs");
+      var tabs = Array.prototype.slice.call(tablist.querySelectorAll("[role=tab]"));
+      var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute("aria-controls")); });
+
+      function select(i, focus) {
+        tabs.forEach(function (t, j) {
+          var on = i === j;
+          t.setAttribute("aria-selected", on);
+          t.tabIndex = on ? 0 : -1;
+          panels[j].hidden = !on;
+        });
+        if (focus) tabs[i].focus();
+      }
+
+      tablist.hidden = false;
+      document.querySelector(".picker").classList.add("tabbed");
+      tabs.forEach(function (t, i) {
+        t.addEventListener("click", function () {
+          select(i);
+          history.replaceState(null, "", "#" + panels[i].id);
+        });
+        t.addEventListener("keydown", function (e) {
+          var n = tabs.length, k = e.key;
+          var next = k === "ArrowRight" ? (i + 1) % n : k === "ArrowLeft" ? (i - 1 + n) % n
+            : k === "Home" ? 0 : k === "End" ? n - 1 : -1;
+          if (next < 0) return;
+          e.preventDefault();
+          select(next, true);
+        });
+      });
+
+      // ai.html#claude opens that assistant's guide and scrolls to setup.
+      var start = panels.findIndex(function (p) { return "#" + p.id === location.hash; });
+      select(start < 0 ? 0 : start);
+      if (start >= 0) document.getElementById("setup").scrollIntoView();
+
+      // Copy the server address.
+      var copy = document.querySelector(".copy-btn");
+      if (navigator.clipboard) {
+        copy.hidden = false;
+        copy.addEventListener("click", function () {
+          navigator.clipboard.writeText(document.getElementById("server-url").textContent.trim()).then(function () {
+            copy.textContent = "Copied";
+            setTimeout(function () { copy.textContent = "Copy"; }, 1600);
+          });
+        });
+      }
+    })();
+  </script>
 </body>
+
 </html>
