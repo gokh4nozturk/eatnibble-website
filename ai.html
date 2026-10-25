@@ -117,15 +117,22 @@
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">What it can do</span>
-          <h2>Three things, done well.</h2>
+          <h2>Log it, fix it, ask about it.</h2>
         </div>
         <div class="uses">
           <article class="use">
             <p class="use-prompt">“Log a chicken wrap and a Coke Zero for lunch”</p>
             <h3>Log a meal</h3>
-            <p>Adds one meal with its items and estimated calories and macros. It never changes or deletes existing
-              meals — edit or delete them in the app.</p>
+            <p>Adds one meal with its items and estimated calories and macros. It shows up in the app marked for your
+              review until you confirm or edit it.</p>
             <code>log_meal</code>
+          </article>
+          <article class="use">
+            <p class="use-prompt">“That omelette was 3 eggs, not 2”</p>
+            <h3>Fix or remove a meal</h3>
+            <p>Corrects or removes a meal from the last 7 days — only when you ask. A corrected meal waits for your
+              review in the app, and the assistant is asked to check with you before removing one.</p>
+            <code>update_meal · delete_meal</code>
           </article>
           <article class="use">
             <p class="use-prompt">“What have I eaten today?”</p>
@@ -292,7 +299,7 @@
             <p>
               Your food log stays on your iPhone. While an assistant is connected, the app shares a short summary of
               the last 7 days of meals (name, time and totals) so the assistant can answer questions, and meals the
-              assistant logs wait on our server only until the app picks them up. Meal photos, your profile, your
+              assistant logs or corrects wait on our server only until the app picks them up. Meal photos, your profile, your
               daily goal and any Apple Health data are never shared. See the
               <a class="inline" href="privacy.html">Privacy Policy</a> for details.
             </p>

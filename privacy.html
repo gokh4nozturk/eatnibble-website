@@ -46,7 +46,7 @@
   <main class="doc">
     <div class="wrap">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 24 October 2026</p>
+      <p class="updated">Last updated: 25 October 2026</p>
 
       <p>
         eatnibble is a calorie and macro tracker. This page explains, in plain terms, what
@@ -74,15 +74,15 @@
         backend we store a user record containing the identifier Apple gives us, that email
         or relay address, and a per-day count of how many analyses you've run (used only to
         enforce the daily limit). Your meals, photos and descriptions are never attached to
-        this record — the only exception is the optional AI assistant connection described
-        below, and only while you use it.
+        this record — the only exceptions are the optional AI assistant connection and
+        partner sharing described below, and only while you use them.
       </p>
 
       <h2>What stays on your device and in your iCloud</h2>
       <p>
         Your meal log, the photos attached to your meals, your daily water count, your
         reminder settings and your profile (height, weight, age, sex, activity level, goal,
-        water goal) are stored in the app's storage on your device, along with your sign-in
+        water goal, plate size, saved meals, recipes, calorie cycling and fasting plans) are stored in the app's storage on your device, along with your sign-in
         session token. They are never uploaded to us unless you connect an AI assistant (see
         the next section), and even then only the limited summary described there.
       </p>
@@ -102,7 +102,9 @@
       </p>
       <p>
         The home and lock screen widgets read the same on-device data; nothing extra leaves
-        your iPhone for them.
+        your iPhone for them. The Apple Watch app gets today's numbers straight from your
+        iPhone over Apple's WatchConnectivity, not through our backend. Weekly coach
+        conversations are kept only on the device where you had them.
       </p>
 
       <h2>Connecting an AI assistant (optional)</h2>
@@ -121,7 +123,8 @@
         <li><strong>Meals the assistant logs:</strong> the meal name, time, food items with
           their estimated grams and calories/macros, and any note. They wait on our backend
           only until the eatnibble app next opens and adds them to your log, and are then
-          deleted from our backend.</li>
+          deleted from our backend. If you ask the assistant to correct or remove a meal, that
+          change waits the same way until the app applies it.</li>
         <li><strong>A summary of your log:</strong> so the assistant can answer questions
           like "what did I eat today?", the app uploads your time zone, today's date and the
           meals of the last 7 days (name, time and calorie/macro totals — no photos). Your
@@ -145,12 +148,55 @@
         access, and removing the last one deletes the summary from our backend.
       </p>
 
+      <h2>Weekly coach</h2>
+      <p>
+        On iPhones that support Apple's on-device language model (Apple Intelligence), the
+        weekly review and the chat after it are written entirely on your iPhone; nothing is
+        sent anywhere. On other iPhones, the coach requires signing in: when you open it, the
+        app sends that week's logged meals (dates, times, meal names and calorie/macro totals)
+        and your conversation with the coach to our backend, which has Google's Gemini write
+        the reply. Nothing from it is stored on our backend. Your goal, weight and any Apple
+        Health data are never sent.
+      </p>
+
+      <h2>Sharing with a partner (optional)</h2>
+      <p>
+        You can pair with one other eatnibble user (Profile → Settings → Partner, signed in
+        only) to send them meals you choose. Neither of you can see the other's log. While
+        paired, our backend stores the pairing, when it was made and the name each of you
+        chose to show. The 6-digit pairing code is stored only as a one-way hash and expires
+        after 10 minutes. A meal you share (its name, time, items, calories/macros and note —
+        no photo) waits on our backend only until your partner's app picks it up, and is then
+        deleted. Disconnecting removes the pairing for both of you.
+      </p>
+
+      <h2>Voice entry</h2>
+      <p>
+        When you describe a meal by voice, eatnibble uses Apple's speech recognition. If your
+        iPhone can recognize the chosen language on device, the audio never leaves it;
+        otherwise Apple processes it under Apple's privacy policy, and the app tells you so.
+        eatnibble never stores or sends us the audio — only the resulting text is analyzed,
+        like a typed description.
+      </p>
+
       <h2>Photos</h2>
       <p>
         Photos you take with the in-app camera are also saved to an "eatnibble" album in
         your Photos library, so you keep a copy. eatnibble asks only for add-only access for
         this — it can't see or read the rest of your library. Photos you pick from your
         library are read only once, for the meal you're logging.
+      </p>
+      <p>
+        Restaurant menu photos are analyzed the same way as meal photos and aren't kept,
+        on your iPhone or on our backend. Nutrition label photos are read on your iPhone
+        and never leave it or get saved. With a photo analysis the app may also send your
+        plate size setting and, on iPhones with LiDAR, the measured distance to the food and
+        the width of the scene — two numbers, nothing else from the depth sensor.
+      </p>
+      <p>
+        Photos taken with the Lock Screen, Control Center or Action button camera are kept
+        in the app's own storage until you next open eatnibble, which then analyzes them like
+        any other photo.
       </p>
       <p>
         When you scan a packaged product's barcode, the camera image is processed on your
@@ -160,8 +206,9 @@
 
       <h2>Reminders</h2>
       <p>
-        Meal and water reminders are scheduled as local notifications on your device. No
-        push server is involved, and no reminder data is sent to us.
+        Meal and water reminders, the evening note, the weekly summary and the fasting timer
+        (including its Live Activity) are scheduled on your device. No push server is
+        involved, and no reminder data is sent to us.
       </p>
 
       <h2>Apple Health</h2>
@@ -175,23 +222,32 @@
           what you've burned to your remaining calorie budget (distance is only used for an
           estimate when no active energy has synced yet);</li>
         <li>the water you've logged today, including water logged by other apps, to keep your
-          water count in step.</li>
+          water count in step;</li>
+        <li>your weight history, for Weight History, the calories-and-weight chart and the
+          measured maintenance estimate;</li>
+        <li>today's workouts, so calorie cycling can offer to make a workout day a high day.</li>
       </ul>
       <p>
-        eatnibble writes only one thing to Apple Health: water. Each glass you tap in the app
-        is saved as a water entry, and removing a glass removes the entry eatnibble created —
-        it never deletes water logged by other apps. The app also asks for permission to
-        write height and weight, but doesn't currently write them.
+        eatnibble writes three things to Apple Health. <strong>Water:</strong> each glass you
+        tap is saved as a water entry, and removing a glass removes the entry eatnibble
+        created — it never deletes water logged by other apps. <strong>Meals:</strong> each
+        meal from the last 30 days of your log is saved as one food entry with its calories,
+        protein, carbs and fat (and fiber, sugar and sodium if you allow them); editing or
+        deleting the meal updates or removes that entry. <strong>Weight:</strong> weigh-ins
+        you add in Weight History. The app also asks for permission to write height, but
+        doesn't currently write it.
       </p>
       <p>
         Health data stays on your device and is never sent to our backend, to a connected AI
-        assistant or any other third party, nor used for advertising. You can decline any of these permissions without losing the
+        assistant, to the weekly coach, to your partner or any other third party, nor used for advertising. You can decline any of these permissions without losing the
         rest of the app, and change them at any time in the Health app or iOS Settings.
       </p>
 
       <h2>Third-party services</h2>
       <p>
-        We use Google's Gemini API to analyze the photo or text you submit; Google's own
+        We use Google's Gemini API to analyze the photos, menus and text you submit, to apply
+        your corrections to an analysis and, on iPhones without Apple's on-device model, to
+        write the weekly coach's replies; Google's own
         terms and privacy practices apply to that processing. Sign in with Apple is handled
         by Apple, and iCloud sync by Apple's CloudKit. Barcode lookups go to
         <a href="https://world.openfoodfacts.org/privacy">Open Food Facts</a>, an open
@@ -205,8 +261,9 @@
         <strong>Clear log</strong> (Profile → Settings) erases the meal entries, meal photos
         and water history stored on your device, and the synced copy in your iCloud (photos already saved to your Photos album
         stay there until you delete them). <strong>Delete Account</strong> (Profile → Settings) permanently
-        deletes your backend account, its daily analysis history and everything stored for AI
-        assistant connections (connections, personal key, pending meals and the summary) —
+        deletes your backend account, its daily analysis history, everything stored for AI
+        assistant connections (connections, personal key, pending meals and the summary) and
+        your partner pairing and any open pairing code —
         this can't be undone.
         Deleting the app removes all remaining local data. Revoking eatnibble's access to
         your Apple ID in iOS Settings signs you out the next time you open the app.
