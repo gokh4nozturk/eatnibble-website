@@ -169,7 +169,8 @@ p {
   width: 28px;
   height: 28px;
   border-radius: 8px;
-  background: linear-gradient(160deg, #1fb655, #0f7a37);
+  background: linear-gradient(180deg, #1caf6d, #008a47);
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
