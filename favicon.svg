@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="eatnibble">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0.42" y2="1">
-      <stop offset="0" stop-color="#1aa94f"/>
-      <stop offset="1" stop-color="#0c7736"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1caf6d"/>
+      <stop offset="1" stop-color="#008a47"/>
     </linearGradient>
     <mask id="bite">
       <rect width="512" height="512" fill="#000"/>
-      <circle cx="238" cy="262" r="160" fill="#fff"/>
-      <circle cx="362" cy="150" r="92" fill="#000"/>
+      <circle cx="240.5" cy="256" r="153.5" fill="#fff"/>
+      <circle cx="366.5" cy="161" r="89" fill="#000"/>
     </mask>
   </defs>
   <rect width="512" height="512" rx="112" fill="url(#bg)"/>
   <g fill="#fff">
     <rect width="512" height="512" mask="url(#bite)"/>
-    <circle cx="396" cy="298" r="19"/>
-    <circle cx="438" cy="346" r="12"/>
+    <circle cx="397.8" cy="298.8" r="9.8"/>
+    <circle cx="433.3" cy="343.3" r="5.8"/>
   </g>
 </svg>
