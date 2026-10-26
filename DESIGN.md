@@ -6,7 +6,7 @@ The site should feel like the app: calm, native-iOS, one accent color. Every pag
 
 - Apple product-page calm: big tight headlines, generous whitespace, few elements per screen.
 - One accent: the brand green. No second CTA color.
-- Features are explained with UI drawn in HTML/CSS that mirrors the real app screens (analysis result, portion adjuster, goal ring, water glasses, history chart). Real screenshots can replace them one-for-one later.
+- Features are explained with UI drawn in HTML/CSS that copies the real app screens (New meal drawer, analysis result, breakdown rows, Home summary / activity / water, History averages + chart, Weight History, Weekly Coach) — the `.m-*` components in `styles.css`, with their own `--m-*` tokens matching iOS grouped lists (light and dark). When the app UI changes, update them from fresh app screenshots. Real screenshots can replace them one-for-one later.
 - Icons are inline stroke SVGs (24px grid, 1.8 stroke, round caps) — no emoji, no colored icon tiles. The only third-party images are AI assistant logos, served by the backend at `/client-icons/<id>.png?v=<ICON_VERSION>`.
 - Light and dark follow the system (`prefers-color-scheme`).
 - Never mention supported languages; they are a given, not a feature.
