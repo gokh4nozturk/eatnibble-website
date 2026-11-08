@@ -2042,3 +2042,647 @@ footer .wrap {
     transform: none;
   }
 }
+
+/* Shared plan / report page (share.html, served at /p/<id> and /r/<id>) */
+
+.share {
+  padding: clamp(40px, 7vw, 72px) 0 clamp(64px, 9vw, 112px);
+}
+
+.share .wrap {
+  max-width: 880px;
+}
+
+.share-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.share-head {
+  margin-bottom: 32px;
+}
+
+.share-head h1 {
+  font-size: clamp(36px, 6vw, 60px);
+  line-height: 1.04;
+}
+
+.share-byline {
+  margin-top: 10px;
+  font-size: clamp(18px, 1.6vw, 21px);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.share-range,
+.share-meta {
+  margin-top: 6px;
+  color: var(--text-2);
+  font-size: 15px;
+}
+
+.share-meta {
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+.share-note {
+  margin: 20px 0 0;
+  padding: 14px 18px;
+  border-left: 3px solid var(--brand);
+  border-radius: 0 12px 12px 0;
+  background: var(--surface-2);
+  color: var(--text);
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.share-actions {
+  display: flex;
+  gap: 8px;
+  margin: -12px 0 20px;
+}
+
+.share-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.share-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+}
+
+.share-card-wide {
+  grid-column: 1 / -1;
+}
+
+.share-card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: 19px;
+  letter-spacing: -0.02em;
+}
+
+.share-card-title .icon {
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+
+.share-fine {
+  margin-top: 14px;
+  color: var(--text-2);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.share-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: none;
+}
+
+/* Macro ring */
+
+.share-macros {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.share-ring {
+  position: relative;
+  flex: none;
+  width: 132px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.share-ring-hole {
+  position: absolute;
+  inset: 16px;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  border-radius: 50%;
+  background: var(--surface);
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.share-legend {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.share-legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.share-legend strong {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Calorie cycling week */
+
+.share-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.share-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.share-day-name {
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.share-day-bar {
+  width: 100%;
+  max-width: 34px;
+  height: 56px;
+  border-radius: 10px;
+  background: var(--surface-2);
+  box-shadow: inset 0 -32px 0 0 color-mix(in srgb, var(--brand) 45%, transparent);
+}
+
+.share-day.is-low .share-day-bar {
+  box-shadow: inset 0 -18px 0 0 color-mix(in srgb, var(--brand) 25%, transparent);
+}
+
+.share-day.is-high .share-day-bar {
+  box-shadow: inset 0 -56px 0 0 var(--brand);
+}
+
+.share-day-level {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 11px;
+  color: var(--text-2);
+}
+
+.share-day.is-high .share-day-level {
+  color: var(--brand-text);
+  font-weight: 600;
+}
+
+/* Fasting */
+
+.share-big {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.share-fast-bar {
+  display: flex;
+  gap: 4px;
+  height: 12px;
+  margin-top: 16px;
+}
+
+.share-fast-fast,
+.share-fast-eat {
+  border-radius: 6px;
+}
+
+.share-fast-fast {
+  background: var(--surface-2);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+.share-fast-eat {
+  background: var(--brand);
+}
+
+/* Rows: recipes, meals */
+
+.share-list,
+.share-items,
+.share-days,
+.share-meals {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.share-row + .share-row,
+.share-day-block + .share-day-block {
+  border-top: 1px solid var(--border);
+}
+
+.share-row {
+  padding: 14px 0;
+}
+
+.share-row:first-child,
+.share-day-block:first-child {
+  padding-top: 0;
+}
+
+.share-row:last-child,
+.share-day-block:last-child {
+  padding-bottom: 0;
+}
+
+.share-row-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.share-row h3,
+.share-day-head h3 {
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+}
+
+.share-row-end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: none;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.share-row-sub {
+  margin-top: 2px;
+  color: var(--text-2);
+  font-size: 13px;
+}
+
+.share-macro-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-top: 8px;
+  color: var(--text-2);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.share-macro-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.share-details {
+  margin-top: 10px;
+}
+
+.share-details summary {
+  width: fit-content;
+  color: var(--brand-text);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.share-items {
+  margin-top: 8px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: var(--surface-2);
+}
+
+.share-item,
+.share-meal {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.share-item + .share-item {
+  border-top: 1px solid var(--border);
+}
+
+.share-item-amount,
+.share-item-kcal,
+.share-meal-kcal {
+  color: var(--text-2);
+  text-align: right;
+}
+
+.share-item-name,
+.share-meal-name {
+  overflow-wrap: anywhere;
+}
+
+/* Import panel */
+
+.share-import {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px 40px;
+  margin-top: 32px;
+  padding: clamp(22px, 4vw, 36px);
+  border-radius: 28px;
+  background: var(--brand-soft);
+}
+
+.share-import h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.15;
+}
+
+.share-steps {
+  margin: 14px 0 0;
+  padding-left: 20px;
+  color: var(--text);
+}
+
+.share-steps li + li {
+  margin-top: 4px;
+}
+
+.share-import-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.share-import-actions .btn {
+  min-width: 184px;
+  background: var(--surface);
+}
+
+/* Report */
+
+.share-stats {
+  display: grid;
+  grid-template-columns: 1.3fr repeat(3, 1fr);
+  gap: 10px;
+}
+
+.share-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 14px;
+  border-radius: 16px;
+  background: var(--surface-2);
+}
+
+.share-stat strong {
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.share-stat-main strong {
+  font-size: 32px;
+  color: var(--brand-text);
+}
+
+.share-stat-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-2);
+  font-size: 13px;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.share-chart {
+  display: grid;
+  grid-template-columns: repeat(var(--count), minmax(0, 1fr));
+  align-items: end;
+  gap: clamp(2px, 0.8vw, 8px);
+  height: 160px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.share-bar {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.share-bar-fill {
+  width: 100%;
+  max-width: 28px;
+  margin: 0 auto;
+  border-radius: 6px 6px 2px 2px;
+  background: var(--brand);
+}
+
+.share-chart-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  color: var(--text-2);
+  font-size: 12px;
+}
+
+.share-day-block {
+  padding: 18px 0;
+}
+
+.share-day-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.share-day-head strong {
+  flex: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.share-meals {
+  margin-top: 10px;
+  padding: 2px 12px;
+  border-radius: 12px;
+  background: var(--surface-2);
+}
+
+.share-meal {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+}
+
+.share-meal + .share-meal {
+  border-top: 1px solid var(--border);
+}
+
+.share-meal-time {
+  color: var(--text-2);
+}
+
+.share-foot {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Loading / empty states */
+
+.share-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 48px 0;
+  text-align: center;
+}
+
+.share-empty .icon {
+  width: 44px;
+  height: 44px;
+  stroke: var(--text-2);
+}
+
+.share-empty h1 {
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+.share-empty .lead {
+  max-width: 460px;
+  margin-bottom: 8px;
+}
+
+.share-skeleton {
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+
+.share-skeleton-eyebrow { width: 160px; height: 26px; border-radius: 999px; margin-bottom: 18px; }
+.share-skeleton-title { width: min(420px, 80%); height: 52px; margin-bottom: 14px; }
+.share-skeleton-line { width: 180px; height: 20px; margin-bottom: 36px; }
+.share-skeleton-card { height: 220px; background: var(--surface-2); border-color: transparent; }
+
+.js .share-skeleton,
+.js .share-skeleton-card {
+  animation: share-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes share-pulse {
+  50% { opacity: 0.55; }
+}
+
+@media (max-width: 720px) {
+  .share-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .share-import {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .share-import-actions {
+    align-items: flex-start;
+  }
+
+  .share-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .share-stat-main {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .share-card {
+    padding: 18px;
+  }
+
+  .share-macros {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .share-ring {
+    align-self: center;
+  }
+
+  .share-stat {
+    padding: 12px 10px;
+  }
+
+  .share-stat strong {
+    font-size: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .share-skeleton,
+  .js .share-skeleton-card {
+    animation: none;
+  }
+}
+
+@media print {
+  .share-page .nav,
+  .share-page footer,
+  .share-page .skip-link,
+  .share-actions,
+  .share-import {
+    display: none;
+  }
+
+  .share-page {
+    background: #fff;
+    color: #000;
+  }
+
+  .share-card {
+    break-inside: avoid;
+    border-color: #ddd;
+  }
+
+  .share-day-block {
+    break-inside: avoid;
+  }
+}

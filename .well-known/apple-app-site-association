@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["7746WX9K8X.com.eatnibble.eatnibble"],
+        "components": [
+          { "/": "/p/*", "comment": "Shared eating plans open in the app, which offers to import them" }
+        ]
+      }
+    ]
+  }
+}

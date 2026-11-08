@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shared on eatnibble</title>
+  <meta name="description" content="An eating plan or meal report shared from the eatnibble app." />
+  <meta name="robots" content="noindex" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="eatnibble" />
+  <meta property="og:title" content="Shared on eatnibble" />
+  <meta property="og:description" content="Macros, recipes and meals shared from eatnibble. Open it to see the plan or add it to your own app." />
+  <meta property="og:image" content="https://eatnibble.app/icons/icon-512.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/icons/icon-32.png" sizes="32x32" type="image/png" />
+  <link rel="shortcut icon" href="/icons/favicon.ico" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+  <script>
+    // The Smart App Banner's "Open" hands this page's link to the app, which imports the plan.
+    (function () {
+      var meta = document.createElement("meta");
+      meta.name = "apple-itunes-app";
+      meta.content = "app-id=6797879350, app-argument=" + location.href.split("#")[0];
+      document.head.appendChild(meta);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body class="share-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="nav" aria-label="Main">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 512 512" width="28" height="28">
+            <mask id="navMark">
+              <rect width="512" height="512" fill="#000" />
+              <circle cx="240.5" cy="256" r="153.5" fill="#fff" />
+              <circle cx="366.5" cy="161" r="89" fill="#000" />
+            </mask>
+            <g fill="#fff">
+              <rect width="512" height="512" mask="url(#navMark)" />
+              <circle cx="397.8" cy="298.8" r="9.8" />
+              <circle cx="433.3" cy="343.3" r="5.8" />
+            </g>
+          </svg>
+        </span>
+        eatnibble
+      </a>
+      <div class="nav-links">
+        <a href="/#features">Features</a>
+        <a href="/#ai">AI assistants</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/support.html">Support</a>
+      </div>
+      <a class="btn btn-primary btn-sm" href="https://apps.apple.com/us/app/eatnibble-ai-calorie-tracker/id6797879350">Get the app</a>
+    </div>
+  </nav>
+
+  <main id="main" class="share" aria-live="polite" aria-busy="true">
+    <div class="wrap">
+      <!-- Filled by /js/share.js. Without JavaScript the explanation below stays. -->
+      <div id="share-root">
+        <div class="share-state" id="share-loading">
+          <div class="share-skeleton share-skeleton-eyebrow"></div>
+          <div class="share-skeleton share-skeleton-title"></div>
+          <div class="share-skeleton share-skeleton-line"></div>
+          <div class="share-grid">
+            <div class="share-card share-skeleton-card"></div>
+            <div class="share-card share-skeleton-card"></div>
+          </div>
+          <noscript>
+            <p class="lead">This shared page needs JavaScript to load. Open it in the eatnibble app on your iPhone instead.</p>
+          </noscript>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-copy">© 2026 eatnibble</div>
+      <div class="footer-links">
+        <a href="/ai.html">AI setup</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/support.html">Support</a>
+        <a href="mailto:support@eatnibble.app">support@eatnibble.app</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/share.js" defer></script>
+</body>
+</html>
