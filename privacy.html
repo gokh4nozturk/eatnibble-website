@@ -46,7 +46,7 @@
   <main class="doc">
     <div class="wrap">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 2 November 2026</p>
+      <p class="updated">Last updated: 8 November 2026</p>
 
       <p>
         eatnibble is a calorie and macro tracker. This page explains, in plain terms, what
@@ -74,8 +74,8 @@
         backend we store a user record containing the identifier Apple gives us, that email
         or relay address, and a per-day count of how many analyses you've run (used only to
         enforce the daily limit). Your meals, photos and descriptions are never attached to
-        this record — the only exceptions are the optional AI assistant connection and
-        partner sharing described below, and only while you use them.
+        this record — the only exceptions are the optional AI assistant connection, partner
+        sharing and shared links described below, and only while you use them.
       </p>
 
       <h2>What stays on your device and in your iCloud</h2>
@@ -85,7 +85,8 @@
         water goal and drink size, goal weight, units, plate size, saved meals, recipes, calorie cycling and
         fasting plans) are stored in the app's storage on your device, along with your sign-in
         session token. They are never uploaded to us unless you connect an AI assistant (see
-        the next section), and even then only the limited summary described there.
+        the next section), and even then only the limited summary described there, or you
+        create a shared link (see "Shared plans and reports" below).
       </p>
       <p>
         If you're signed in to iCloud, your meal log, water count and profile also sync to
@@ -169,6 +170,40 @@
         after 10 minutes. A meal you share (its name, time, items, calories/macros and note —
         no photo) waits on our backend only until your partner's app picks it up, and is then
         deleted. Disconnecting removes the pairing for both of you.
+      </p>
+
+      <h2>Shared plans and reports (optional)</h2>
+      <p>
+        You can share your eating plan or a meal report as a link (Profile → Sharing, signed
+        in only). Nothing is shared until you create a link, and only what you choose goes
+        into it:
+      </p>
+      <ul>
+        <li>
+          <strong>A plan:</strong> your macro split and, if you include them, your calorie
+          cycling days, fasting hours, recipes and pinned meals.
+        </li>
+        <li>
+          <strong>A meal report:</strong> the meals you logged in the period you pick (7, 14
+          or 30 days) — each meal's name, time, calories and macros. No photos or notes from
+          your log.
+        </li>
+      </ul>
+      <p>
+        Both carry the name you type to show who shared it and, if you add one, a short note.
+        Your calorie goal, weight, height, age, calories burned and any other Apple Health
+        data are never included.
+      </p>
+      <p>
+        Our backend stores the link's content with your account so you can see and stop your
+        links. <strong>Anyone who has the link can see it</strong> on eatnibble.app — your
+        Apple ID, email and account identifier are never shown there — and anyone with a plan
+        link can add the plan to their own app. Shared pages are marked so search engines
+        don't index them. A link stops working when the time you chose runs out (1, 7 or 30
+        days, or never) or when you stop sharing it in Profile → Shared Links. A link you stop
+        is deleted from our backend right away; an expired one can no longer be opened and is
+        cleaned up from our backend afterwards. A plan someone already added to their app
+        stays in their app.
       </p>
 
       <h2>Voice entry</h2>
@@ -267,7 +302,7 @@
         stay there until you delete them). <strong>Delete Account</strong> (Profile → Settings → Account) permanently
         deletes your backend account, its daily analysis history, everything stored for AI
         assistant connections (connections, personal key, pending meals and the summary) and
-        your partner pairing and any open pairing code —
+        your partner pairing and any open pairing code, and all your shared links —
         this can't be undone.
         Deleting the app removes all remaining local data. Revoking eatnibble's access to
         your Apple ID in iOS Settings signs you out the next time you open the app.
