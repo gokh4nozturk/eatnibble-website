@@ -4,7 +4,7 @@
 (function () {
   "use strict";
 
-  var API = "https://eatnibble-backend.vercel.app/public/shares/";
+  var API = "https://api.eatnibble.app/public/shares/";
   var STORE = "https://apps.apple.com/us/app/eatnibble-ai-calorie-tracker/id6797879350";
   var COLORS = { protein: "var(--protein)", carbs: "var(--brand)", fat: "var(--fat)" };
 
