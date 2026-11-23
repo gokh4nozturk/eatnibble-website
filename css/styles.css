@@ -1451,6 +1451,10 @@ p {
   gap: 12px;
 }
 
+.guide-link {
+  margin-top: 16px;
+}
+
 .tabbed .guide h3 img {
   display: none;
 }
